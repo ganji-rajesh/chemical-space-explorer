@@ -1,0 +1,66 @@
+# Chemical Space Explorer Configuration
+
+# Input constraints
+input:
+  max_molecules: 5000
+  required_column: "smiles"
+  supported_formats: ["csv", "sdf", "smi", "txt", "mol", "mol2"]
+
+# Featurization parameters
+fingerprint:
+  type: "morgan"
+  radius: 2
+  n_bits: 2048
+  use_features: false
+  use_chirality: false
+
+# UMAP parameters
+umap:
+  n_neighbors: 15
+  min_dist: 0.1
+  n_components: 2
+  metric: "jaccard"
+  random_state: 42
+
+# K-Means clustering parameters
+kmeans:
+  default_n_clusters: 10
+  min_clusters: 2
+  max_clusters: 50
+  random_state: 42
+  n_init: 10
+
+# Cluster analysis
+cluster:
+  n_representatives: 5
+  mcs_timeout: 5
+
+# Built-in dataset labels
+labels:
+  available:
+    - "ATC Level 1"
+    - "ATC Level 2"
+    - "Therapeutic Area"
+    - "Target Family"
+    - "FDA Approved"
+
+# Molecular properties for coloring
+properties:
+  - "LogP"
+  - "Molecular Weight"
+  - "TPSA"
+  - "HBA"
+  - "HBD"
+  - "Rotatable Bonds"
+  - "Aromatic Rings"
+
+# Performance
+performance:
+  precompute_builtin: true
+  cache_embeddings: true
+
+# Random seeds for reproducibility
+random_seeds:
+  global: 42
+  umap: 42
+  kmeans: 42
