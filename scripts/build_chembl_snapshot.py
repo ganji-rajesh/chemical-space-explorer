@@ -58,9 +58,10 @@ def process_chembl_data(molecules):
     records = []
 
     for mol in molecules:
+        molecule_structures = mol.get('molecule_structures') or {}
         record = {
             'chembl_id': mol.get('molecule_chembl_id'),
-            'smiles': mol.get('molecule_structures', {}).get('canonical_smiles'),
+            'smiles': molecule_structures.get('canonical_smiles'),
             'name': mol.get('pref_name', mol.get('molecule_chembl_id')),
             'max_phase': mol.get('max_phase'),
         }
@@ -70,9 +71,8 @@ def process_chembl_data(molecules):
             record['ATC Level 1'] = atc[:1] if atc else None
             record['ATC Level 2'] = atc[:3] if len(atc) >= 3 else None
 
-        if 'molecule_hierarchy' in mol:
-            hierarchy = mol['molecule_hierarchy']
-            record['Target Family'] = hierarchy.get('protein_class_desc')
+        hierarchy = mol.get('molecule_hierarchy') or {}
+        record['Target Family'] = hierarchy.get('protein_class_desc')
 
         records.append(record)
 

@@ -1,6 +1,6 @@
 # 🧪 Chemical Space Explorer
 
-A portfolio-ready web application for visualizing and exploring chemical space using dimensionality reduction and clustering. Combines data science (UMAP, K-Means) with computational chemistry (RDKit, Morgan fingerprints).
+A web application for visualizing and exploring chemical space using dimensionality reduction and clustering. Combines data science (UMAP, K-Means) with computational chemistry (RDKit, Morgan fingerprints).
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![RDKit](https://img.shields.io/badge/RDKit-2023.3+-orange.svg)
@@ -230,10 +230,10 @@ MIT License - see LICENSE file
 
 ## 📧 Contact
 
-Your Name - your.email@example.com
+Ganji Rajesh - 19rajesh18@gmail.com
 
-Project Link: https://github.com/yourusername/chemical-space-explorer
+Project Link: https://github.com/ganji-rajesh/chemical-space-explorer
 
 ---
 
-**Built with** ❤️ **for portfolio and drug discovery**
+**Built with** ❤️ **for curiosity to learn**
