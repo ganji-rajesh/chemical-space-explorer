@@ -236,4 +236,4 @@ Project Link: https://github.com/ganji-rajesh/chemical-space-explorer
 
 ---
 
-**Built with** ❤️ **for curiosity to learn**
+**Built with** ❤️ **for learning out of curiosity**
